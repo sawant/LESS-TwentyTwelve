@@ -52,6 +52,48 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 /* =Reset
 -------------------------------------------------------------- */
 
+/* Variables */
+@background: #e6e6e6;
+@background_inner: #fff;
+
+@bg_button: #e6e6e6;
+@bg_grad_button_top: #f4f4f4;
+@bg_grad_button_bottom: #e6e6e6;
+
+@color_site_name: #515151;
+@color_site_name_hover: #21759b;
+@color_site_slogan: #777;
+@color_text_content: #444;
+@color_post_title_link: #21759b;
+@color_post_title_link_hover: #0f3647;
+@color_nav_link: #6a6a6a;
+@color_nav_link_hover: #000;
+@color_small_titles: #636363; // .widget_title, .archive-title, .page-title, .entry-content th, .comment-content th
+@color_comments_meta_link: #777;
+@color_comments_meta_link_hover: #21759b;
+@color_commentsarea_link: #444;
+@color_commentsarea_link_hover: #21759b;
+@color_commentsarea_time: #5e5e5e;
+@color_meta_text: #777;
+@color_widgetarea_link: #777;
+@color_widgetarea_link_hover: #21759b;
+@color_footer_link: #686868;
+@color_footer_link_hover: #21759b;
+@color_button_text: #7c7c7c;
+@color_reply_link: #686868;
+@color_reply_link_hover: #21759b;
+@color_allowedtags: #5e5e5e;
+@color_required: red;
+
+@color_border_button: #d2d2d2;
+@color_border_nav_top: #ededed;
+@color_border_nav_bottom: #ededed;
+@color_border_article_bottom: #ededed;
+@color_border_article_sticky_top: #ededed;
+@color_border_article_sticky_bottom: #ededed;
+@color_border_input: #ccc;
+@color_border_footer_top: #ededed;
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -187,7 +229,7 @@ img {
 	line-height: 2.181818182;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #636363;
+	color: @color_small_titles;
 }
 
 /* Shared Post Format styling */
@@ -210,15 +252,15 @@ li.bypostauthor cite span {
 	font-size: 0.785714286rem;
 	line-height: 1.428571429;
 	font-weight: normal;
-	color: #7c7c7c;
-	background-color: #e6e6e6;
+	color: @color_button_text;
+	background-color: @bg_button;
 	background-repeat: repeat-x;
-	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
-	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
-	background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
-	background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
-	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
-	border: 1px solid #d2d2d2;
+	background-image: -moz-linear-gradient(top, @bg_grad_button_top, @bg_grad_button_bottom);
+	background-image: -ms-linear-gradient(top, @bg_grad_button_top, @bg_grad_button_bottom);
+	background-image: -webkit-linear-gradient(top, @bg_grad_button_top, @bg_grad_button_bottom);
+	background-image: -o-linear-gradient(top, @bg_grad_button_top, @bg_grad_button_bottom);
+	background-image: linear-gradient(top, @bg_grad_button_top, @bg_grad_button_bottom);
+	border: 1px solid @color_border_button;
 	border-radius: 3px;
 	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
 }
@@ -274,7 +316,7 @@ textarea {
 	padding: 6px;
 	padding: 0.428571429rem;
 	font-family: inherit;
-	border: 1px solid #ccc;
+	border: 1px solid @color_border_input;
 	border-radius: 3px;
 }
 
@@ -446,17 +488,17 @@ body {
 	font-size: 1rem;
 	font-family: Helvetica, Arial, sans-serif;
 	text-rendering: optimizeLegibility;
-	color: #444;
+	color: @color_text_content;
 }
 body.custom-font-enabled {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 a {
 	outline: none;
-	color: #21759b;
+	color: @color_post_title_link;
 }
 a:hover {
-	color: #0f3647;
+	color: @color_post_title_link_hover;
 }
 
 /* Assistive text */
@@ -471,7 +513,7 @@ a:hover {
 .site {
 	padding: 0 24px;
 	padding: 0 1.714285714rem;
-	background-color: #fff;
+	background-color: @background_inner;
 }
 .site-content {
 	margin: 24px 0 0;
@@ -493,13 +535,13 @@ a:hover {
 }
 .site-header h1 a,
 .site-header h2 a {
-	color: #515151;
+	color: @color_site_name;
 	display: inline-block;
 	text-decoration: none;
 }
 .site-header h1 a:hover,
 .site-header h2 a:hover {
-	color: #21759b;
+	color: @color_site_name_hover;
 }
 .site-header h1 {
 	font-size: 24px;
@@ -511,7 +553,7 @@ a:hover {
 	font-size: 13px;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
-	color: #777;
+	color: @color_site_slogan;
 }
 .header-image {
 	margin-top: 24px;
@@ -586,15 +628,15 @@ section[role="banner"] {
 	margin-left: 2.571428571rem;
 }
 .widget-area .widget a {
-	color: #777;
+	color: @color_widgetarea_link;
 }
 .widget-area .widget a:hover {
-	color: #21759b;
+	color: @color_widgetarea_link_hover;
 }
 
 /* Footer */
 footer[role="contentinfo"] {
-	border-top: 1px solid #ededed;
+	border-top: 1px solid @color_border_footer_top;
 	clear: both;
 	font-size: 12px;
 	font-size: 0.857142857rem;
@@ -609,10 +651,10 @@ footer[role="contentinfo"] {
 	padding: 1.714285714rem 0;
 }
 footer[role="contentinfo"] a {
-	color: #686868;
+	color: @color_footer_link;
 }
 footer[role="contentinfo"] a:hover {
-	color: #21759b;
+	color: @color_footer_link_hover;
 }
 
 
@@ -654,15 +696,15 @@ footer[role="contentinfo"] a:hover {
 }
 .comments-link a,
 .entry-meta a {
-	color: #777;
+	color: @color_comments_meta_link;
 }
 .comments-link a:hover,
 .entry-meta a:hover {
-	color: #21759b;
+	color: @color_comments_meta_link_hover;
 }
 article.sticky .featured-post {
-	border-top: 4px double #ededed;
-	border-bottom: 4px double #ededed;
+	border-top: 4px double @color_border_article_sticky_bottom;
+	border-bottom: 4px double @color_border_article_sticky_bottom;
 	color: #777;
 	font-size: 13px;
 	font-size: 0.928571429rem;
@@ -883,7 +925,7 @@ img.aligncenter {
 	padding-bottom: 1.714285714rem;
 	margin-bottom: 72px;
 	margin-bottom: 5.142857143rem;
-	border-bottom: 4px double #ededed;
+	border-bottom: 4px double @color_border_article_bottom;
 }
 .page-links {
 	clear: both;
@@ -895,7 +937,7 @@ footer.entry-meta {
 	font-size: 13px;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
-	color: #777;
+	color: @color_meta_text;
 }
 .single-author .entry-meta .by-author {
 	display: none;
@@ -1120,17 +1162,17 @@ article.format-quote .entry-content blockquote {
 	text-decoration: none;
 	font-size: 12px;
 	font-size: 0.857142857rem;
-	color: #5e5e5e;
+	color: @color_commentsarea_time;
 }
 .comments-area article header a {
 	text-decoration: none;
 	color: #5e5e5e;
 }
 .comments-area article header a:hover {
-	color: #21759b;
+	color: @color_commentsarea_link_hover;
 }
 .comments-area article header cite a {
-	color: #444;
+	color: @color_commentsarea_link;
 }
 .comments-area article header cite a:hover {
 	text-decoration: underline;
@@ -1168,10 +1210,10 @@ a.comment-reply-link {
 	font-size: 13px;
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
-	color: #686868;
+	color: @color_reply_link;
 }
 a.comment-reply-link:hover {
-	color: #21759b;
+	color: @color_reply_link_hover;
 }
 .commentlist .pingback {
 	line-height: 1.714285714;
@@ -1232,10 +1274,10 @@ a.comment-reply-link:hover {
 	font-size: 12px;
 	font-size: 0.857142857rem;
 	line-height: 2;
-	color: #5e5e5e;
+	color: @color_allowedtags;
 }
 .required {
-	color: red;
+	color: @color_required;
 }
 label ~ span.required {
 	display: block;
@@ -1392,8 +1434,8 @@ img#wpstats {
 	}
 	.main-navigation ul.nav-menu,
 	.main-navigation div.nav-menu > ul {
-		border-bottom: 1px solid #ededed;
-		border-top: 1px solid #ededed;
+		border-bottom: 1px solid @color_border_nav_bottom;
+		border-top: 1px solid @color_border_nav_top;
 		display: inline-block !important;
 		text-align: left;
 		width: 100%;
@@ -1409,12 +1451,12 @@ img#wpstats {
 	}
 	.main-navigation li a {
 		border-bottom: 0;
-		color: #6a6a6a;
+		color: @color_nav_link;
 		line-height: 3.692307692;
 		text-transform: uppercase;
 	}
 	.main-navigation li a:hover {
-		color: #000;
+		color: @color_nav_link_hover;
 	}
 	.main-navigation li {
 		margin: 0 40px 0 0;
@@ -1513,7 +1555,7 @@ img#wpstats {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
 	body {
-		background-color: #e6e6e6;
+		background-color: @background;
 	}
 	body .site {
 		padding: 0 40px;
